@@ -13,8 +13,8 @@
 
 /* Variables */
 :root {
-    --main-color: #ff6d46;
-    --second-color: #ecfdf8;
+    --main-color: #b700ff;
+    --second-color: #f0ecfd;
     --text-color: #121011;
     --bg-color: #ffffff;
 
@@ -95,7 +95,7 @@ header.active{
     border-radius: 0.4rem;
 }
 .header-icon .bx:hover {
-    background: #ff8664;
+    background: #eda5ff;
 }
 .header-icon i{
     position: relative;
@@ -174,7 +174,7 @@ header.active{
     font-weight: 500;
 }
 .btn:hover {
-    background: #ff8664;
+    background: #eda5ff;
 }
 .home-img {
     animation: float 3s linear infinite;
@@ -263,7 +263,7 @@ header.active{
     cursor: pointer;
 }
 .products-container .box .bx:hover{
-    background: #ff8664;
+    background: #eda5ff;
 }
 .customers-container{
     display: grid;
