@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300&display=swap');
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Container Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+
+/* Heading Styling */
+.container .heading {
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.container .heading h3 {
+  font-size: 3.4em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #222;
+}
+
+.container .heading h3 span {
+  font-weight: 100;
+}
+
+/* Box Layout for Image Columns */
+.container .box {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  justify-content: space-between;
+  width: 100%;
+  margin: -10px; /* Adjust for added margins on children */
+}
+
+/* Dream Section Styling for Individual Columns */
+.container .box .dream {
+  flex: 1 1 calc(33.33% - 20px); /* 3 columns layout with equal margins */
+  margin: 10px; /* Equal margin on all sides */
+}
+
+/* Image Styling */
+.container .box .dream img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Margin below each image */
+  transition: transform 0.8s, filter 0.8s; /* Smooth transition for the effect */
+}
+
+/* Hover effect for images */
+.container .box .dream img:hover {
+  filter: grayscale(1);             /* Convert image to grayscale */
+  transform: scale(1.01);           /* Slightly enlarge the image */
+}
+
+/* Button Styling */
+.container .btn {
+  margin: 40px 0 70px 0;
+  background: #222;
+  padding: 15px 40px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+
+/* Responsive Design */
+
+/* Tablets (2 columns) */
+@media only screen and (max-width: 1024px) {
+  .container .box .dream {
+    flex: 1 1 calc(50% - 20px); /* Adjust to 2 columns with equal margins */
+  }
+
+  .container .heading {
+    width: 100%; /* Full-width heading on smaller screens */
+  }
+  
+  .container .heading h3 {
+    font-size: 2.2em; /* Adjust heading size for tablets */
+  }
+}
+
+/* Mobile (1 column) */
+@media only screen and (max-width: 640px) {
+  .container .box {
+    flex-direction: column; /* Stack columns vertically */
+    margin: 0; /* Reset container margin for single column */
+  }
+
+  .container .box .dream {
+    flex: 1 1 100%; /* Full width for single column */
+    margin: 10px 0; /* Vertical margin only */
+  }
+
+  .container .heading {
+    width: 100%; /* Full-width heading */
+  }
+  
+  .container .heading h3 {
+    font-size: 1.7em; /* Adjust heading size for mobile */
+  }
+}
